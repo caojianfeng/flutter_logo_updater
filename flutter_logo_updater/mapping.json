@@ -1,0 +1,8 @@
+{
+    "ios": {
+        "appiconset": "ios/Runner/Assets.xcassets/AppIcon.appiconset"
+    },
+    "android": {
+        "manifest": "android/app/src/main/AndroidManifest.xml"
+    }
+}
