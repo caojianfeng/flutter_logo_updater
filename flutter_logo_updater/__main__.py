@@ -20,7 +20,7 @@ def get_cfg(cfg_file: str) -> dict:
 
 
 def print_using() -> None:
-    print('flutter_logo_updater logo_file_path project_file_path')
+    print("USING:\n\tflutter_logo_updater logo_file_path project_dir_path")
 
 
 def get_ios_icons(project_dir: str, appiconset_path: str) -> List:

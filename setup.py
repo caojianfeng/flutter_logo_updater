@@ -16,7 +16,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="flutter_logo_updater",
-    version="0.0.1",
+    version="0.0.2",
     keywords=("pip", "flutter_logo_updater"),
     description="Tool to update all app icons in flutter project",
     long_description=long_description,
