@@ -117,3 +117,5 @@ So flutter_logo_updater kown which dir to search, mipmap or drawble.
 
 1. Find a config from your_flutter_project/flutter_logo_updater.json
 2. Cut down size of the icons by [pngquant](https://pngquant.org/)
+
+[中文文档](https://www.jianshu.com/p/fb7dd98b2595)
