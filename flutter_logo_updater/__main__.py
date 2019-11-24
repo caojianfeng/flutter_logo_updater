@@ -28,7 +28,6 @@ def get_ios_icons(project_dir: str, appiconset_path: str) -> List:
         os.path.join(project_dir, appiconset_path)
     )
 
-    print(ios_icon_info)
     return ios_icon_info
 
 
@@ -40,9 +39,15 @@ def get_android_icons(project_dir: str, manifest_path: str) -> List:
     return android_icon_infos
 
 
-def update_icons(icon_infos):
-    for icon_info in icon_infos:
-        print(icon_info)
+def update_icons(logo_file, icon_infos):
+    # https://blog.csdn.net/ruguowoshiyu/article/details/79872997
+    with open(logo_file, 'rb') as f:
+        img_src = Image.open(logo_file)
+        for icon_info in icon_infos:
+            size = icon_info["size"]
+            dst_file_name = icon_info["filename"]
+            img_tobe_scale = img_src.resize((size, size), Image.ANTIALIAS)
+            img_tobe_scale.save(dst_file_name, 'PNG')
 
 
 def main() -> None:
@@ -62,7 +67,7 @@ def main() -> None:
 
     icon_infos = android_icon_infos + ios_icon_infos
 
-    update_icons(icon_infos)
+    update_icons(logo_file, icon_infos)
 
 
 if __name__ == "__main__":
