@@ -41,6 +41,9 @@ def get_android_icons(project_dir: str, manifest_path: str) -> List:
 
 def update_icons(logo_file, icon_infos):
     # https://blog.csdn.net/ruguowoshiyu/article/details/79872997
+    count = len(icon_infos)
+    num_width = len(str(count))
+    index = 0
     with open(logo_file, 'rb') as f:
         img_src = Image.open(logo_file)
         for icon_info in icon_infos:
@@ -48,18 +51,27 @@ def update_icons(logo_file, icon_infos):
             dst_file_name = icon_info["filename"]
             img_tobe_scale = img_src.resize((size, size), Image.ANTIALIAS)
             img_tobe_scale.save(dst_file_name, 'PNG')
+            index += 1
+            print(
+                f"[{index:0{num_width}}/{count}]->({size}*{size})\t{dst_file_name}"
+            )
 
 
 def main() -> None:
 
     argv_size = len(sys.argv)
-    if argv_size <= 1:
+    if argv_size <= 2:
         print_using()
         return
 
     logo_file = os.path.abspath(sys.argv[1])
     project_dir = os.path.abspath(sys.argv[2])
 
+    print("==================================================")
+    print("PROJECT LOGO Updating...")
+    print(f"\tIn {project_dir}")
+    print(f"\tWith {logo_file}\n")
+    print("--------------------------------------------------")
     cfg = get_cfg('mapping.json')
     android_icon_infos = get_android_icons(
         project_dir, cfg["android"]["manifest"])
@@ -68,6 +80,7 @@ def main() -> None:
     icon_infos = android_icon_infos + ios_icon_infos
 
     update_icons(logo_file, icon_infos)
+    print("==================================================")
 
 
 if __name__ == "__main__":

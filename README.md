@@ -12,7 +12,36 @@ flutter_logo_updater logo_file_path project_file_path
 
 Exmple:
 ```txt
-flutter_logo_updater msks/images/logo_lxb.png msks/
+
+caojianfeng$ flutter_logo_updater msks/images/logo_lxb.png  msks
+
+==================================================
+PROJECT LOGO Updating...
+        In /Users/caojianfeng/Documents/w/msks
+        With /Users/caojianfeng/Documents/w/msks/images/logo_lxb.png
+
+--------------------------------------------------
+[01/20]->(48*48)        /Users/caojianfeng/Documents/w/msks/android/app/src/main/res/mipmap-mdpi/ic_launcher.png
+[02/20]->(72*72)        /Users/caojianfeng/Documents/w/msks/android/app/src/main/res/mipmap-hdpi/ic_launcher.png
+[03/20]->(96*96)        /Users/caojianfeng/Documents/w/msks/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png
+[04/20]->(144*144)      /Users/caojianfeng/Documents/w/msks/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png
+[05/20]->(192*192)      /Users/caojianfeng/Documents/w/msks/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+[06/20]->(20*20)        /Users/caojianfeng/Documents/w/msks/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png
+[07/20]->(29*29)        /Users/caojianfeng/Documents/w/msks/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png
+[08/20]->(40*40)        /Users/caojianfeng/Documents/w/msks/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png
+[09/20]->(40*40)        /Users/caojianfeng/Documents/w/msks/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png
+[10/20]->(58*58)        /Users/caojianfeng/Documents/w/msks/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png
+[11/20]->(60*60)        /Users/caojianfeng/Documents/w/msks/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png
+[12/20]->(76*76)        /Users/caojianfeng/Documents/w/msks/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png
+[13/20]->(80*80)        /Users/caojianfeng/Documents/w/msks/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png
+[14/20]->(87*87)        /Users/caojianfeng/Documents/w/msks/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png
+[15/20]->(120*120)      /Users/caojianfeng/Documents/w/msks/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png
+[16/20]->(120*120)      /Users/caojianfeng/Documents/w/msks/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png
+[17/20]->(152*152)      /Users/caojianfeng/Documents/w/msks/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png
+[18/20]->(167*167)      /Users/caojianfeng/Documents/w/msks/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png
+[19/20]->(180*180)      /Users/caojianfeng/Documents/w/msks/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png
+[20/20]->(1024*1024)    /Users/caojianfeng/Documents/w/msks/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png
+==================================================
 ```
 
 ## How does it work:
