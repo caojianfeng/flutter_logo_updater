@@ -19,11 +19,33 @@ def get_cfg(cfg_file: str) -> dict:
     return json_obj
 
 
-def print_using():
+def print_using() -> None:
     print('flutter_logo_updater logo_file_path project_file_path')
 
 
-def main():
+def get_ios_icons(project_dir: str, appiconset_path: str) -> List:
+    ios_icon_info = ios_finder.get_app_icon_info(
+        os.path.join(project_dir, appiconset_path)
+    )
+
+    print(ios_icon_info)
+    return ios_icon_info
+
+
+def get_android_icons(project_dir: str, manifest_path: str) -> List:
+    android_icon_infos = android_finder.get_app_icon_info(
+        project_dir,
+        os.path.join(project_dir, manifest_path)
+    )
+    return android_icon_infos
+
+
+def update_icons(icon_infos):
+    for icon_info in icon_infos:
+        print(icon_info)
+
+
+def main() -> None:
 
     argv_size = len(sys.argv)
     if argv_size <= 1:
@@ -34,17 +56,13 @@ def main():
     project_dir = os.path.abspath(sys.argv[2])
 
     cfg = get_cfg('mapping.json')
+    android_icon_infos = get_android_icons(
+        project_dir, cfg["android"]["manifest"])
+    ios_icon_infos = get_ios_icons(project_dir, cfg["ios"]["appiconset"])
 
-    android_icon_name = android_finder.get_app_icon_from_manifest(
-        os.path.join(project_dir, cfg["android"]["manifest"])
-    )
+    icon_infos = android_icon_infos + ios_icon_infos
 
-    ios_icon_info = ios_finder.get_app_icon_info(
-        os.path.join(project_dir, cfg["ios"]["appiconset"])
-    )
-
-    print(android_icon_name)
-    print(ios_icon_info)
+    update_icons(icon_infos)
 
 
 if __name__ == "__main__":
