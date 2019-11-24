@@ -44,6 +44,8 @@ PROJECT LOGO Updating...
 ==================================================
 ```
 
+![Updated screen shot](screenshot/updated.png)
+
 ## How does it work:
 
 ### 1. Find a config
