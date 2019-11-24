@@ -19,7 +19,7 @@ flutter_logo_updater msks/images/logo_lxb.png msks/
 
 ### 1. Find a config
 
-Find a config from your_flutter_project/flutter_logo_updater.json
+Find a config from your_flutter_project/flutter_logo_updater.json (TODO)
 
 If no config found a default cfg while be use.
 
@@ -81,3 +81,8 @@ So flutter_logo_updater kown which dir to search, mipmap or drawble.
 
 ### 3. Resize you logo(1024*1024) to sizes of the icons and replace them. 
 
+
+### 4. TODO
+
+1. Find a config from your_flutter_project/flutter_logo_updater.json
+2. Cut down size of the icons by [pngquant](https://pngquant.org/)
