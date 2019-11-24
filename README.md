@@ -44,7 +44,7 @@ PROJECT LOGO Updating...
 ==================================================
 ```
 
-![Updated screen shot](screenshot/updated.png)
+![Updated screen shot](https://raw.githubusercontent.com/caojianfeng/flutter_logo_updater/master/screenshot/updated.png)
 
 ## How does it work:
 
