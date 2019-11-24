@@ -30,7 +30,7 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     include_package_data=True,
     package_data={
-        'flutter_logo_updater': ['mapping.cfg'],
+        'flutter_logo_updater': ['mapping.json'],
     },
     platforms="any",
     install_requires=["Pillow", "pngquant"],

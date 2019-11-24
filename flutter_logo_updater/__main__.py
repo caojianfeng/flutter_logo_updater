@@ -3,8 +3,8 @@
 import sys
 import os
 from PIL import Image, ImageDraw, ImageFont
-import android_finder
-import ios_finder
+from . import android_finder
+from . import ios_finder
 from ezutils import readjson
 from typing import *
 
