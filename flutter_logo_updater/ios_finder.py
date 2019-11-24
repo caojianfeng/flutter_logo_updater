@@ -31,11 +31,18 @@ def re_app_icon_info(appicon, appiconset):
     return new_appicon
 
 
+def sort_by_size(icon_info):
+    return int(icon_info['size'])
+
+
 def get_app_icon_info(appiconset):
     path = os.path.join(appiconset, 'Contents.json')
     appicons = readjson(path)['images']
 
     new_appicons = []
     for appicon in appicons:
-        new_appicons.append(re_app_icon_info(appicon, appiconset))
+        app_info = re_app_icon_info(appicon, appiconset)
+        if app_info not in new_appicons:
+            new_appicons.append(app_info)
+    new_appicons.sort(key=sort_by_size)
     return new_appicons

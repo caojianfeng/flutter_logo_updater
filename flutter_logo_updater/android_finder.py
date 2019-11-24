@@ -61,8 +61,13 @@ def get_icon_name_from_manifest(manifest_name):
     return iconname
 
 
+def sort_by_size(icon_info):
+    return int(icon_info['size'])
+
+
 def get_app_icon_info(project_dir, manifest_name):
     iconname = get_icon_name_from_manifest(manifest_name)
     icon_paths = find_icon_path_by_iconname(iconname, manifest_name)
     icon_infos = read_icon_infos(icon_paths)
+    icon_infos.sort(key=sort_by_size)
     return icon_infos
