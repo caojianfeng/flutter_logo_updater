@@ -37,6 +37,11 @@ def sort_by_size(icon_info):
 
 def get_app_icon_info(appiconset):
     path = os.path.join(appiconset, 'Contents.json')
+    if not os.path.exists(path):
+        print(
+            f'File not found when find app icon info for ios:\n\t{path}')
+        return []
+
     appicons = readjson(path)['images']
 
     new_appicons = []

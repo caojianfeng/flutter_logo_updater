@@ -16,7 +16,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="flutter_logo_updater",
-    version="0.0.2",
+    version="0.0.4",
     keywords=("pip", "flutter_logo_updater"),
     description="Tool to update all app icons in flutter project",
     long_description=long_description,
@@ -33,7 +33,7 @@ setuptools.setup(
         'flutter_logo_updater': ['mapping.json'],
     },
     platforms="any",
-    install_requires=["Pillow", "pngquant"],
+    install_requires=["Pillow",  "ezutils"],  # "pngquant",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

@@ -66,6 +66,10 @@ def sort_by_size(icon_info):
 
 
 def get_app_icon_info(project_dir, manifest_name):
+    if not os.path.exists(manifest_name):
+        print(
+            f'File not found when find app icon info for android:\n\t{manifest_name}')
+        return []
     iconname = get_icon_name_from_manifest(manifest_name)
     icon_paths = find_icon_path_by_iconname(iconname, manifest_name)
     icon_infos = read_icon_infos(icon_paths)
